@@ -509,7 +509,7 @@ footer {
   margin: 0;
 }
 
-.about-text a {
+.about-text a:not(.button) {
   color: var(--accent-deep);
   font-weight: 500;
 
@@ -523,11 +523,10 @@ footer {
     text-decoration-color 0.2s ease;
 }
 
-.about-text a:hover {
+.about-text a:not(.button):hover {
   color: var(--accent);
   text-decoration-color: var(--accent-deep);
 }
-
 @media (max-width: 800px) {
 
   .section {
@@ -551,6 +550,27 @@ footer {
 
   .about-content {
     gap: 2rem;
+  }
+
+}
+
+.button-primary {
+  background: var(--accent-deep);
+  color: var(--cream);
+  text-decoration: none;
+}
+
+.button-primary:hover {
+  background: var(--accent);
+  color: var(--cream);
+  text-decoration: none;
+}
+
+@media (max-width: 800px) {
+
+  #sessions .button {
+    width: 100%;
+    text-align: center;
   }
 
 }
