@@ -204,10 +204,10 @@ border-radius: 4px;
 }
 
 .hero-image {
-    filter: saturate(0.92) contrast(0.96); 
   width: min(420px, 100%);
   aspect-ratio: 1;
   object-fit: cover;
+  object-position: center 22%;
 
   border-radius:
     50% 50% 46% 54%
