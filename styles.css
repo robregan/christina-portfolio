@@ -482,3 +482,29 @@ footer {
     font-size: clamp(2.4rem, 11vw, 3.5rem);
   }
 }
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+
+  margin-bottom: 4rem;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: var(--text);
+}
+
+.section-label span {
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.section-label p {
+  margin: 0;
+}
