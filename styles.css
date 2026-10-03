@@ -107,14 +107,14 @@ nav a:hover {
 }
 
 .hero-inner {
-  width: min(1200px, 100%);
+  width: min(1300px, 100%);
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 0.95fr 1.05fr;
 
   align-items: center;
-  gap: 6rem;
+  gap: 4rem;
 }
 
 .eyebrow {
@@ -201,10 +201,11 @@ border-radius: 4px;
 .hero-image-wrap {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .hero-image {
-  width: min(420px, 100%);
+  width: min(540px, 100%);
   aspect-ratio: 1;
   object-fit: cover;
   object-position: center 22%;
@@ -223,9 +224,9 @@ border-radius: 4px;
 ========================= */
 
 .section {
-  width: min(1200px, calc(100% - 4rem));
+ width: min(1200px, calc(100% - 4rem));
   margin: 0 auto;
-  padding: 9rem 0;
+  padding: 5rem 0;
 }
 
 .section-label {
@@ -233,7 +234,7 @@ border-radius: 4px;
   align-items: center;
   gap: 1rem;
 
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 
   font-size: 0.75rem;
   font-weight: 600;
@@ -438,12 +439,12 @@ footer {
   }
 
   .hero {
-    padding: 8rem 1rem 4rem;
+     min-height: auto;
+  padding: 7rem 2rem 3rem;
   }
 
   .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 4rem;
+     grid-template-columns: 1fr 1fr;
   }
 
   h1 {
@@ -451,7 +452,7 @@ footer {
   }
 
   .hero-image {
-    width: min(350px, 90%);
+     width: min(390px, 94%);
   }
 
   .section {
@@ -527,8 +528,120 @@ footer {
   color: var(--accent);
   text-decoration-color: var(--accent-deep);
 }
-@media (max-width: 800px) {
 
+.hero + .section {
+  padding-top: 3.5rem;
+}
+
+/* =========================
+   WEEKLY CLASS CARD
+========================= */
+
+.weekly-class-layout {
+  align-items: center;
+}
+
+.weekly-class-card {
+  position: relative;
+
+  padding: 2.75rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b8623b 0%,
+      #9f4e2f 100%
+    );
+
+  color: var(--cream);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 18px 45px rgba(115, 59, 37, 0.16);
+}
+
+.weekly-card-eyebrow {
+  margin: 0 0 1rem;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: rgba(255, 250, 244, 0.85);
+}
+
+.weekly-class-card h3 {
+  margin: 0 0 1.5rem;
+
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 0.98;
+
+  color: var(--cream);
+}
+
+.weekly-card-time {
+  margin: 0 0 1.5rem;
+  padding: 1rem 0;
+
+  border-top: 1px solid rgba(255, 250, 244, 0.3);
+  border-bottom: 1px solid rgba(255, 250, 244, 0.3);
+
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  line-height: 1.25;
+
+  color: var(--cream);
+}
+
+.weekly-card-copy {
+  margin-bottom: 1rem;
+
+  font-size: 1rem;
+  line-height: 1.65;
+
+  color: rgba(255, 250, 244, 0.92);
+}
+
+.weekly-card-button {
+  display: inline-block;
+
+  margin-top: 0.75rem;
+
+  padding: 0.8rem 1.2rem;
+
+  border: 1px solid rgba(255, 250, 244, 0.45);
+  border-radius: 4px;
+
+  color: var(--cream);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.weekly-card-button:hover {
+  background: rgba(255, 250, 244, 0.12);
+  transform: translateY(-2px);
+}
+@media (max-width: 800px) {
+.weekly-class-card {
+  padding: 2rem;
+}
+
+.weekly-class-card h3 {
+  font-size: clamp(2.5rem, 12vw, 3.5rem);
+}
+
+.weekly-card-time {
+  font-size: 1.3rem;
+}
   .section {
     width: calc(100% - 2rem);
     padding: 4.5rem 0;
@@ -573,4 +686,19 @@ footer {
     text-align: center;
   }
 
+}
+
+@media (max-width: 800px) {
+  .section {
+    width: calc(100% - 2rem);
+    padding: 3.5rem 0;
+  }
+
+  .hero + .section {
+    padding-top: 2.5rem;
+  }
+
+  .section-label {
+    margin-bottom: 1.75rem;
+  }
 }
